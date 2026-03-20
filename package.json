@@ -1,0 +1,44 @@
+{
+  "name": "load-skills",
+  "version": "0.1.0",
+  "description": "Load and validate agent skills from configurable paths.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "fmt": "prettier -w .",
+    "fmt:check": "prettier -c .",
+    "prepare": "husky",
+    "precommit:check": "bun run typecheck && bun run test && bun run fmt:check",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "skills",
+    "agent",
+    "loader",
+    "frontmatter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
+  }
+}
