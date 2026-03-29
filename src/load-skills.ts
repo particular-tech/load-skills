@@ -3,7 +3,7 @@ import { open, readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 
 import { discoverSkillFiles } from "./discovery.js";
-import { parseSkillDocument } from "./parseSkill.js";
+import { parseSkillDocument } from "./parse-skill.js";
 import type {
   IgnoredDuplicateSkill,
   InvalidSkill,
@@ -15,7 +15,7 @@ import type {
   SkillWarning,
 } from "./types.js";
 import { getErrorMessage, pathExists } from "./utils.js";
-import { applyValidationRules } from "./validateSkill.js";
+import { applyValidationRules } from "./validate-skill.js";
 
 export async function loadSkills(
   config?: LoadSkillsConfig,

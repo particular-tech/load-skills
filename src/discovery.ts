@@ -29,7 +29,6 @@ export async function discoverSkillFiles(
 
   const report: LoadSkillsPathReport[] = [];
   const discoveredSkillFiles: DiscoveredSkillFile[] = [];
-  const discovered = new Set<string>();
 
   for (const pair of pathPairs) {
     const rootPath = pair.resolvedPath;
@@ -62,14 +61,11 @@ export async function discoverSkillFiles(
     const pathReportIndex = report.length;
     for (const skillFilePath of found) {
       const canonical = await realpath(skillFilePath);
-      if (!discovered.has(canonical)) {
-        discovered.add(canonical);
-        discoveredSkillFiles.push({
-          skillFilePath: canonical,
-          pathReportIndex,
-          inputPath,
-        });
-      }
+      discoveredSkillFiles.push({
+        skillFilePath: canonical,
+        pathReportIndex,
+        inputPath,
+      });
     }
 
     report.push(reportItem);

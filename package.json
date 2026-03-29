@@ -1,6 +1,6 @@
 {
   "name": "load-skills",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Load and validate agent skills from configurable paths.",
   "type": "module",
   "main": "./dist/index.js",
@@ -31,6 +31,14 @@
   ],
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agent-tooling/load-skills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agent-tooling/load-skills/issues"
+  },
+  "homepage": "https://github.com/agent-tooling/load-skills#readme",
   "dependencies": {
     "yaml": "^2.8.2"
   },

@@ -1,4 +1,4 @@
-export { loadSkills } from "./loadSkills.js";
+export { loadSkills } from "./load-skills.js";
 export type {
   IgnoredDuplicateSkill,
   InvalidSkill,
