@@ -40,13 +40,13 @@
   },
   "homepage": "https://github.com/agent-tooling/load-skills#readme",
   "dependencies": {
-    "yaml": "^2.8.2"
+    "yaml": "2.8.2"
   },
   "devDependencies": {
-    "@types/node": "^25.5.0",
-    "husky": "^9.1.7",
-    "prettier": "^3.6.2",
-    "typescript": "^5.9.3",
-    "vitest": "^4.1.0"
+    "@types/node": "25.5.0",
+    "husky": "9.1.7",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3",
+    "vitest": "4.1.0"
   }
 }
